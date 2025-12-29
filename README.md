@@ -1,50 +1,108 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Workflow Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A comprehensive CRM and project management platform built with Laravel that helps businesses manage leads, clients, projects, and team workflows efficiently.
 
-## About Laravel
+## About the Project
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The Workflow Management System is a role-based application designed to streamline operations from lead management through project delivery. It provides a unified platform for sales teams, project managers, and operations teams to collaborate effectively.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Key Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Employee Management**: Admin can create and manage employees with different roles and types
+- **CRM Functionality**: Sales employees can access the CRM to manage leads with detailed notes
+- **Lead Conversion**: Seamlessly convert qualified leads into client projects/orders
+- **Project Management**: Assign orders to project managers and operation teams
+- **Sprint & Task Management**: Create sprints and tasks with real-time status tracking
+- **Role-Based Access Control**: Secure access based on user roles (Admin, Sales, Project Manager, Operations)
+- **File Upload Support**: Handle file uploads throughout the workflow
+- **24/7 Availability**: Always available platform for team collaboration
 
-## Learning Laravel
+## Installation
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### Requirements
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- PHP 8.1 or higher
+- Composer
+- Node.js & npm
+- MySQL, or PostgreSQL
 
-## Laravel Sponsors
+### Setup Instructions
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+1. **Clone or Extract the Project**
+   ```bash
+   cd /path/to/workflow-mgmt
+   ```
 
-### Premium Partners
+2. **Install PHP Dependencies**
+   ```bash
+   composer install
+   ```
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+3. **Install JavaScript Dependencies**
+   ```bash
+   npm install
+   ```
+
+4. **Create Environment File**
+   ```bash
+   cp .env.example .env
+   ```
+
+5. **Generate Application Key**
+   ```bash
+   php artisan key:generate
+   ```
+
+6. **Configure Database**
+   - Edit `.env` file and configure your database connection (DB_HOST, DB_DATABASE, DB_USERNAME, DB_PASSWORD)
+
+7. **Run Migrations**
+   ```bash
+   php artisan migrate
+   ```
+
+8. **Seed the Database (Optional)**
+   ```bash
+   php artisan db:seed
+   ```
+
+9. **Build Assets**
+   ```bash
+   npm run build
+   ```
+
+10. **Start Development Server**
+    ```bash
+    php artisan serve
+    ```
+
+The application will be available at `http://localhost:8000`
+
+## Development
+
+To run the development server with hot reload:
+
+```bash
+npm run dev
+```
+
+In another terminal, run:
+
+```bash
+php artisan serve
+```
+
+## Testing
+
+Run the test suite:
+
+```bash
+php artisan test
+```
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Thank you for considering contributing to the Workflow Management System! Please feel free to submit pull requests or issues.
 
 ## Code of Conduct
 

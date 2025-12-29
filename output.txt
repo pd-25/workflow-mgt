@@ -1,0 +1,29 @@
+
+   INFO  Seeding database.  
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000]: General error: 1364 Field 'password' doesn't have a default value (Connection: mysql, SQL: insert into `employees` (`slug`, `full_name`, `phone`, `email`, `address`, `govt_id_type`, `govt_id`, `zipcode`, `profile_image`, `employee_type_id`, `updated_at`, `created_at`) values (violet-schuppe-iv-b893U, Violet Schuppe IV, +1.251.270.5557, tjaskolski@example.com, 93380 Greenfelder Lake Apt. 946
+Kiehnmouth, KS 94082-1720, National ID, at202811, 44075, ?, 7, 2025-12-29 18:39:58, 2025-12-29 18:39:58))
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:826
+    822▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    823▕                 );
+    824▕             }
+    825▕ 
+  ➜ 826▕             throw new QueryException(
+    827▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    828▕             );
+    829▕         }
+    830▕     }
+
+      [2m+15 vendor frames [22m
+
+  16  database/seeders/EmployeeSeeder.php:15
+      Illuminate\Database\Eloquent\Factories\Factory::create()
+      [2m+23 vendor frames [22m
+
+  40  artisan:16
+      Illuminate\Foundation\Application::handleCommand(Object(Symfony\Component\Console\Input\ArgvInput))
+

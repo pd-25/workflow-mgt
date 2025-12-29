@@ -13,8 +13,14 @@
 1. All time avaiable
 2. Role wise access
 3. can handle file upload
+4. soft delete to avoide data loss
 
 
 # Database schemas
+
+admins table - id, name, email, password
+employee_type - id, title, status, crm_access(0/1), projec_mgmt_access(0/1)
+employees table - id, full_name, phone, email, address, govt_id_type, govt_id, zipcode, profile_image, employee_type_id, deleted_at 
+
 
 
