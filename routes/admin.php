@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\admin\auth\AuthController;
 use App\Http\Controllers\admin\dashboard\DashboardController;
+use App\Http\Controllers\admin\employee\EmployeeController;
 use App\Http\Middleware\Admin;
 use Illuminate\Support\Facades\Route;
 
@@ -11,6 +12,8 @@ Route::post('admin/login', [AuthController::class, 'login'])->name('admin.login'
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
 
  Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
+    
+    Route::get('/employees', [EmployeeController::class, 'index'])->name('admin.employee.index');
 
 
     Route::get('log-out', [AuthController::class, 'adminLogout'])->name('admin.logout');

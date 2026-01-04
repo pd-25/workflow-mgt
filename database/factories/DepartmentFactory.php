@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\EmployeeType>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Department>
  */
-class EmployeeTypeFactory extends Factory
+class DepartmentFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +17,7 @@ class EmployeeTypeFactory extends Factory
      */
     public function definition(): array
     {
-        $title = fake()->unique()->jobTitle();
+        $title = fake()->unique()->word(); // changed jobTitle to word for department
         return [
             'title' => $title,
             'slug' => Str::slug($title),

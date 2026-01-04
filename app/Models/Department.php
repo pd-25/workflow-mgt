@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class EmployeeType extends Model
+class Department extends Model
 {
     use HasFactory;
     protected $fillable = [
@@ -24,7 +24,7 @@ class EmployeeType extends Model
     ];
 
     /**
-     * Get all employees of this type.
+     * Get all employees of this department.
      */
     public function employees(): HasMany
     {

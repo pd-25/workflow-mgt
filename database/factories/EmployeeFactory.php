@@ -2,7 +2,8 @@
 
 namespace Database\Factories;
 
-use App\Models\EmployeeType;
+use App\Models\Department;
+use App\Models\Designation;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -32,7 +33,8 @@ class EmployeeFactory extends Factory
             'govt_id' => fake()->bothify('??######'),
             'zipcode' => fake()->postcode(),
             'profile_image' => null,
-            'employee_type_id' => EmployeeType::inRandomOrder()->first()?->id ?? EmployeeType::factory(),
+            'department_id' => Department::inRandomOrder()->first()?->id ?? Department::factory(),
+            'designation_id' => Designation::inRandomOrder()->first()?->id ?? Designation::factory(),
         ];
     }
 }

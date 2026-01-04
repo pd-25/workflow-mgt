@@ -23,7 +23,8 @@ return new class extends Migration
             $table->string('govt_id')->nullable();
             $table->string('zipcode')->nullable();
             $table->string('profile_image')->nullable();
-            $table->foreignId('employee_type_id')->constrained('employee_types')->onDelete('cascade');
+            $table->foreignId('department_id')->constrained('departments')->onDelete('cascade');
+            $table->foreignId('designation_id')->nullable()->constrained('designations')->onDelete('set null');
             $table->softDeletes();
             $table->timestamps();
         });

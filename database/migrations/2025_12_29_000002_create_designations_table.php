@@ -11,13 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('employee_types', function (Blueprint $table) {
+        Schema::create('designations', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->string('slug')->unique();
             $table->boolean('status')->default(true);
-            $table->boolean('crm_access')->default(false);
-            $table->boolean('projec_mgmt_access')->default(false);
             $table->timestamps();
         });
     }
@@ -27,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('employee_types');
+        Schema::dropIfExists('designations');
     }
 };

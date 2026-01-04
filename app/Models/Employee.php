@@ -22,7 +22,8 @@ class Employee extends Model
         'govt_id',
         'zipcode',
         'profile_image',
-        'employee_type_id',
+        'department_id',
+        'designation_id',
     ];
 
     protected $hidden = [
@@ -34,10 +35,18 @@ class Employee extends Model
     ];
 
     /**
-     * Get the employee type for this employee.
+     * Get the department for this employee.
      */
-    public function employeeType(): BelongsTo
+    public function department(): BelongsTo
     {
-        return $this->belongsTo(EmployeeType::class);
+        return $this->belongsTo(Department::class);
+    }
+
+    /**
+     * Get the designation for this employee.
+     */
+    public function designation(): BelongsTo
+    {
+        return $this->belongsTo(Designation::class);
     }
 }

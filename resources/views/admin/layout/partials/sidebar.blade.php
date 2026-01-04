@@ -27,6 +27,17 @@
                         </a>
                     </li>
 
+                    <!-- Employees -->
+                     <li>
+                        <a href="{{ route('admin.employee.index') }}"
+                           class="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-slate-200 duration-300 ease-in-out hover:bg-slate-800 {{ request()->routeIs('admin.employee.index') ? 'bg-indigo-600 text-white' : '' }}">
+                            <svg class="h-5 w-5 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            Employees
+                        </a>
+                    </li>
+
                     <!-- Leads -->
                     <li>
                         <a href="#"
